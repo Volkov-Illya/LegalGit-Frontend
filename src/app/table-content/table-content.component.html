@@ -1,0 +1,32 @@
+<div class=table-content>
+	<section class="left-table">
+		<div class="table-title">American Standard Version <span class="date"></span></div>
+		<hr class="title-up-line">
+		<p class="content-title">transcript</p>
+		<div class="content" ng-class="leftText ? 'show-text-table' : 'hide-text-table'">
+			<span >
+				{{leftText}}
+			</span>
+		</div>
+		<hr class="title-up-line source-line">
+		<p class="content-title">source</p>
+		<div class="source">
+			<img ng-show="leftImage" class="source-img" src="/assets/{{leftImage}}">
+		</div>
+	</section>
+	<section class="right-table">
+		<div class="table-title">LOLCAT <span class="date"></span></div>
+		<hr class="title-up-line">
+		<p class="content-title">transcript</p>
+		<div class="content" ng-class="rightText ? 'show-text-table' : 'hide-text-table'">
+			<span >
+				{{rightText}}
+			</span>
+		</div>
+		<hr class="title-up-line source-line">
+		<p class="content-title">source</p>
+		<div class="source">
+			<img ng-show="rightImage" class="source-img" src="/assets/{{rightImage}}">
+		</div>
+	</section>	
+</div>

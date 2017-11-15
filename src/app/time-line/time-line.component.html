@@ -1,0 +1,68 @@
+<!-- 
+<div class="time-line">
+	
+	<div class="month" ng-repeat="item in tlc.timeValues">
+		<span class="year" ng-show="item.month === 'Jan'">{{item.year}}</span>
+		<span>{{item.month}}</span>
+		<span>{{item.year}}</span>
+	</div>
+
+</div>
+
+<div class="first-source-line">
+	<div class="source first-source">
+		<span class="source-title">
+			<i class="fa fa-file-text-o" aria-hidden="true"></i>
+			<span>American Standard Version</span>
+		</span>
+		<img class="source-img" src="../../img/AmericanStandardVersion.jpg">
+	</div>
+	<div class="line">
+		<hr>
+		<span 
+			class="lines_{{$index}} circle-line" 
+			title="{{line.date}}" 
+			ng-repeat="line in tlc.dateParams track by $index" 
+			ng-bind-html="tlc.getLinesElements('lines_' + $index)"
+			timeIds="{{line.docIds}}"
+			ng-show="tlc.compareLineIds( {{line.docIds}}, 'first', ('lines_' + $index) )"
+		></span>
+		<span 
+			class="circles_{{$index}} first-circles first-circles-group circ" 
+			title="{{circle.date}}" 
+			eventId="{{circle.id}}"
+			ng-repeat="circle in tlc.dateParams track by $index" 
+			ng-bind-html="tlc.getCircleElements('circles_' + $index)"
+			ng-show="tlc.compareIds( {{circle.docIds}}, 'first', ('circles_' + $index) )"
+			timeIds="{{circle.docIds}}"
+		></span>
+	</div>
+</div>
+
+<div class="second-source-line">
+	<div class="source second-source">
+		<span class="source-title">
+			<i class="fa fa-file-text-o" aria-hidden="true"></i>
+			<span>Lol Cat Bible</span>
+		</span>
+		<img class="source-img" src="../../img/LOLCatBible.jpg">
+	</div>
+	<div class="line">
+		<hr>
+		<span 
+			class="circle_{{$index}} second-circles circ" 
+			title="{{circle.date}}"
+			eventId="{{circle.id}}" 
+			ng-repeat="circle in tlc.dateParams track by $index" 
+			ng-bind-html="tlc.getCircleElements('circle_' + $index)"
+			ng-show="tlc.compareIds( {{circle.docIds}}, 'second' )"
+			ng-class="({{circle.docIds}}).length > 1 ? 'first-circles-group' : 'second-circles-group'"
+		></span>
+	</div>
+</div>
+
+<div class="indicator">
+	<div class="label">13.03.2017</div>
+	<div class="tip-line"></div>
+</div>
+ -->

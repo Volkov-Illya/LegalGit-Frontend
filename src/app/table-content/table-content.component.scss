@@ -1,0 +1,76 @@
+app-table-content {
+	position: relative;
+	display: block;
+	height: calc( 100% - 255px );
+	overflow-y: scroll;
+    background: #333;
+	.table-content {
+		display: flex;
+		position: relative;
+		height: 100%;
+		min-height: 500px;
+		.left-table {
+			display: table;
+			float: left;
+		    width: 50%;
+		    border: 1.5px solid black;
+		    height: 100%;
+		}
+		.right-table {
+			display: table;
+			float: right;
+	        width: 50%;
+		    border: 1.5px solid black;
+		    height: 100%;
+		}
+		.left-table, .right-table {
+			.table-title {
+				color: white;
+			    text-align: center;
+			    padding-top: 20px;
+			}
+			.title-up-line {
+			    margin-top: 5px;
+			    width: 90%;
+		        border: 0.5px solid #5a5959;
+			}
+			.source-line {
+				margin-top: 20px;
+			}
+			.content-title {
+				color: white;
+			    padding-left: 60px;
+			}
+			.content {
+				padding: 0 15px 0 15px;
+			    text-align: inherit;
+		        width: 75%;
+			    margin: 0 auto;
+			    min-height: 185px;
+			    max-height: 185px;
+			    overflow-y: auto;
+		        span {
+					color: #fff;
+		        }
+			}
+			.show-text-table {
+				border: 1px solid black;
+				background: #666;
+			}
+			.hide-text-table {
+				border: none;
+				background: transparent;
+			}
+			.source {
+				text-align: center;
+				margin-bottom: 30px;
+				img {
+					width: 60%;
+				}
+			}
+			.loading {
+				filter: blur(2px);
+			}
+		}
+	}
+}
