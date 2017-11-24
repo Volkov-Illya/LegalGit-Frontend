@@ -1,0 +1,61 @@
+
+<div class="time-line">
+	{{timeValues}}
+	<div class="month" *ngFor="let item of timeValues">
+		<span class="year" *ngIf="item.month === 'Jan'">{{item.year}}</span>
+		<span>{{item.month}}</span>
+		<span>{{item.year}}</span>
+	</div>
+
+</div>
+
+<div class="first-source-line">
+	<div class="source first-source">
+		<span class="source-title">
+			<i class="fa fa-file-text-o" aria-hidden="true"></i>
+			<span>American Standard Version</span>
+		</span>
+		<img class="source-img" src="/assets/AmericanStandardVersion.jpg">
+	</div>
+	<div class="line">
+		<hr>
+		<span 
+			*ngFor="let line of dateParams; let i = index"
+			[attr.class]="'lines_'+ i"
+			title="{{line.date}}" 
+			[ngStyle]="getLinesElements('lines_' + i, 'first', line.docIds )"
+		></span>
+		<span 
+			*ngFor="let circle of dateParams; let i = index"
+			[attr.class]=" 'first-circles first-circles-group circ circles_'+ i"
+			[ngStyle]="getCircleElements('circles_' + i,'first', circle.docIds )"
+			title="{{circle.date}}" 
+			[attr.eventId]="circle.id"
+		></span>
+	</div>
+</div>
+
+<div class="second-source-line">
+	<div class="source second-source">
+		<span class="source-title">
+			<i class="fa fa-file-text-o" aria-hidden="true"></i>
+			<span>Lol Cat Bible</span>
+		</span>
+		<img class="source-img" src="/assets/LOLCatBible.jpg">
+	</div>
+	<div class="line">
+		<hr>
+		<span 
+			*ngFor="let circle of dateParams; let i = index"
+			[attr.class]="'second-circles first-circles-group secondCirc circ secondCircles_'+ i"
+			[ngStyle]="getCircleElements('secondCircles_' + i,'second', circle.docIds )"
+			title="{{circle.date}}"
+			[attr.eventId]="circle.id" 
+		></span>
+	</div>
+</div>
+
+<div class="indicator">
+	<div class="label">13.03.2017</div>
+	<div class="tip-line"></div>
+</div>
